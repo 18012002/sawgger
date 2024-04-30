@@ -1,0 +1,10 @@
+version: '3.2'
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: swagger-ui
+    ports:
+      - 9000:8080
+    restart: always
+    volumes:
+      - ./swagger.yaml:/usr/share/nginx/html/swagger.yaml
